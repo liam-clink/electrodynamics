@@ -1,20 +1,17 @@
-\documentclass[12pt,violet]{bbe}
+\documentclass[12pt,a4paper,violet]{bbe}
 \usepackage{blindtext}
 
 \usepackage{fontspec}
 \usepackage{lipsum}
 
-%\setmainfont[Ligatures=TeX]{Cambria}
-%\usefonttheme{serif}
-%\usefonttheme{professionalfonts}
-
+\setmainfont[Ligatures=TeX]{[Cambria.ttf]}
 
 
 \begin{document}
 
 \chapter{Electrostatics}
 	\section{Coulomb Force}
-	What is charge?
+	What is charge? 
 	
 	\begin{definition}
 	$$ \vec{F}_{1 \rightarrow 2} = k \frac{q_1 q_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)$$
@@ -27,7 +24,8 @@
 	\end{remark}
 	
 	\section{Electric Field}
-	The electric field is the same for all charges, while the electric force is charge dependent.
+	Explain free vs bound right at the start. The electric field is the same for all charges, while the electric force is charge dependent. The $\Vec{E}$ field is the total field, and is what appears in the Coulomb force.
+    We will start with $\Vec{D}$ field, as we only consider free charges for now.
 	
 	\section{Dipoles}
 	
@@ -53,6 +51,12 @@
 	
 	Example: Calculate dipole of metal ball in uniform electric field, use to calculate susceptibility of metal ball lattice
 	
+
+
+	Talk about mica waveguide cover in microwaves as an example. Mica powder with a phenolic resin binder, high real part of dielectric constant, small imaginary part.
+	Provides physical protection, allows coupling in of microwaves, but has high enough reflectivity to make the main cavity have nice standing waves without crazy hotspots and such
+	
+
 	\blinddocument
 	
 \end{document}
