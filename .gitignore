@@ -3,3 +3,5 @@
 *.log
 *.fdb_latexmk
 *.ttf
+
+./build_files/*
