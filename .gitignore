@@ -3,5 +3,6 @@
 *.log
 *.fdb_latexmk
 *.ttf
-
+*.pdf
+*.synctex*
 ./build_files/*
