@@ -1,15 +1,26 @@
-% !TEX program = xelatex
+% !TEX program = lualalatex
 
-\documentclass[12pt,a4paper,violet]{bbe}
+\documentclass[12pt]{book}
 \usepackage{blindtext}
 
 \usepackage{fontspec}
 \usepackage{lipsum}
+\usepackage{xcolor}
 
-\setmainfont[Ligatures=TeX]{[Cambria.ttf]}
+\usepackage{amssymb,amsmath,amsthm}
+\newtheorem{theorem}{Theorem}
+
+\usepackage{amsthm}
+\usepackage{physics}
+
+
+
+\setmainfont[Ligatures=TeX]{[Cambria]}
 
 
 \begin{document}
+
+\part{Statics}
 
 \chapter{Electrostatics}
 \section{Coulomb Force}
@@ -61,18 +72,49 @@ What about magnetic field doing no work? What about magnetic work on a wire with
 
 Talk about how lorentz contraction can't explain wire magnetic force.
 
-\section*{Magnetic Induction}
+\section{Magnetic Induction}
 
-\section*{Faraday Paradox}
+\section{Faraday Paradox}
 
+We've already covered induced EMF in the context of linear motion, but as is usually the case in physics, things can get bizarre when translated to rotational motion.
+Unlike when a magnet is linearly translated in the vicinity of a circuit, when a {\color{red} at least disk, don't know about square} magnet is \textit{rotated}, no induced EMF is observed.
+This means that the intuition of field lines being cut by a wire is flawed. Pradoxes reveal that our understanding about a situation is incomplete.
+Now consider a rotating metal disk, with a brush at the edge, and another at the center, with the brushes connected by a wire that makes this arrangement a closed circuit.
+When a magnet is held over the rotating disk, it produces an EMF, but this is something we would expect with the cutting field lines intuition. So what's going on here?
+With linear motion, when the magnet and circuit moved together, there was no EMF.
+But surprisingly, in the case of rotational motion, when the magnet and this disk are rotating together, there \textit{is} an induced EMF!
+This is known as the \textbf{Faraday Paradox}.
+This result means that it is not the rotation of the magnet that gives an EMF, but the rotation of the disk. But why?
 
+Well, let's go back to the fundamental equations, rather than relying on intuition.
+When a magnet translates in space, the magnetic stray field changes in time, and this change results in a circulation of the electric field according to
+
+$\curl{\vec{E}} = - \pdv{\vec{B}}{t}$.
+
+However, when the magnet is static, and the circuit moves, there is no circulation in the electric field due to the magnet, because the magnetic field is static.
+The current that's generated here is produced by the Lorentz force.
+The only difference between these scenarios is the change of reference frame of the observer, and the fields do change with reference frame.
+
+	{\color{red} Derive the equivalence between loop integral with lorentz force and change in flux, depending on reference frame.}
+
+In the rotating disk scenario, there is no longer a reference frame where no part of the circuit is moving.
+
+\part{Electrodynamics}
+
+\chapter{A Magnet that Attracts Aluminum and Copper}
+
+\footnote{Discussed in a lecture by Dan Gelbart: https://www.youtube.com/watch?v=7ZeBWJLRXqM}
+
+An alternating magnetic field usually repels non-ferromagnetic conductors.
+
+Copper ring inlaid into steel core of electromagnet.
 
 \chapter{Electromagnetic waves}
 Talk about mica waveguide cover in microwaves as an example. Mica powder with a phenolic resin binder, high real part of dielectric constant, small imaginary part.
 Provides physical protection, allows coupling in of microwaves, but has high enough reflectivity to make the main cavity have nice standing waves without crazy hotspots and such
 
 
-In wave section, discuss Gaussian beam, and give as a problem finding the Intensity isosurfaces, which are dumbbell shaped
+In wave section, discuss Gaussian beam, and give as a problem finding the intensity isosurfaces, which are dumbbell shaped
 
 \blinddocument
 
